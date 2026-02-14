@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Mode Colors */
+  --primary-bg: #FAFAFA;
+  --secondary-bg: #FFFFFF;
+  --tertiary-bg: #F5F5F5;
+
+  --primary-text: #1A1A1A;
+  --secondary-text: #666666;
+  --tertiary-text: #999999;
+
+  --accent-primary: #3B82F6;
+  --accent-secondary: #10B981;
+  --accent-tertiary: #F59E0B;
+  --accent-danger: #EF4444;
+
+  --border: #E5E5E5;
+  --border-focus: #3B82F6;
+  --border-hover: #D4D4D4;
+
+  /* Spacing System (8pt Grid) */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-strong: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Animation Durations */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+
+  /* Animation Easings */
+  --easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easing-enter: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --easing-exit: cubic-bezier(0.4, 0.0, 1, 1);
+  --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dark {
+  /* Dark Mode Colors */
+  --primary-bg: #0A0A0A;
+  --secondary-bg: #1A1A1A;
+  --tertiary-bg: #262626;
+
+  --primary-text: #FAFAFA;
+  --secondary-text: #A3A3A3;
+  --tertiary-text: #737373;
+
+  --accent-primary: #60A5FA;
+  --accent-secondary: #34D399;
+  --accent-tertiary: #FBBF24;
+  --accent-danger: #F87171;
+
+  --border: #262626;
+  --border-focus: #60A5FA;
+  --border-hover: #404040;
+
+  /* Dark Mode Shadows */
+  --shadow-subtle: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-strong: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+@theme inline {
+  --color-primary-bg: var(--primary-bg);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-tertiary-bg: var(--tertiary-bg);
+
+  --color-primary-text: var(--primary-text);
+  --color-secondary-text: var(--secondary-text);
+  --color-tertiary-text: var(--tertiary-text);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+  --color-accent-danger: var(--accent-danger);
+
+  --color-border: var(--border);
+  --color-border-focus: var(--border-focus);
+  --color-border-hover: var(--border-hover);
+}
+
+/* Base styles */
+body {
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Simple transitions instead of complex animations */
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Using system fonts as fallbacks since custom fonts are not available */
+/* These are already loaded by Next.js */
